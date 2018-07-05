@@ -40,4 +40,6 @@ The EDeklaracja object in the namespace of GPS.Components.Cryptography.EDeklarac
 
     In addition, the library also provides the Encryption object in namespace GPS.Components.Cryptography, which allows string encryption after providing a static Password.
 
-    The signature is compatible for the "e-deklaracje" system in Poland
+The signature is compatible for the "e-deklaracje" system in Poland
+
+**Library only for testing purposes**
