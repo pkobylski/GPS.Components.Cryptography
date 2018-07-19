@@ -9,7 +9,7 @@ The EDeklaracja object in the namespace of GPS.Components.Cryptography.EDeklarac
 ```
 public static XmlDocument PodpiszXades(XmlDocument doc, X509Certificate2 cert, CryptType cryptType)
 
-public static byte[] PodpiszXades(string content, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
+public static XmlDocument PodpiszXades(string content, X509Certificate2 cert, CryptType cryptType)
 
 public static byte[] PodpiszXadesByte(XmlDocument doc, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
 
