@@ -16,7 +16,6 @@ public static byte[] PodpiszXadesByte(XmlDocument doc, X509Certificate2 cert, Cr
 public static byte[] PodpiszXadesByteZbiorczy(string base64String, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
 
 Parameter @CryptType - SHA1, SHA256 (enum)
-
 ```
 and helpers:
 
@@ -36,7 +35,6 @@ public static byte[] GetByte64(object obj)
 public static byte[] GetByte64(object obj, ref string xml)
 
 public static byte[] GetByte64(byte [] byteArray)
-
 ```
 
 ## Examples
@@ -45,7 +43,6 @@ public static byte[] GetByte64(byte [] byteArray)
 XmlDocument signed = new XmlDocument();
     
 byte[] byte = EDeklaracja.PodpiszXadesByte(doc, this.X509Certificate, ref signed);
-
 ```
 ## Example Signature
 
@@ -100,7 +97,6 @@ The signature is compatible for the "e-deklaracje" system in Poland
       </xades:QualifyingProperties>
     </Object>
   </Signature>
-
 ```
 
 ## Licence
