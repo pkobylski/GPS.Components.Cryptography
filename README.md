@@ -90,7 +90,7 @@ The signature is compatible for the "e-deklaracje" system in Poland
                   <ds:DigestValue xmlns:ds="http://www.w3.org/2000/09/xmldsig#">OZxcvpyaH+nykGgYZaipqx8AXvoi8TEZs+18qEppvbU=</ds:DigestValue>
                 </xades:CertDigest>
                 <xades:IssuerSerial>
-                  <ds:X509IssuerName xmlns:ds="http://www.w3.org/2000/09/xmldsig#">CN=DO_NOT_TRUST_FiddlerRoot, O=DO_NOT_TRUST, OU=Created by http://www.piotrkobylski.com</ds:X509IssuerName>
+                  <ds:X509IssuerName xmlns:ds="http://www.w3.org/2000/09/xmldsig#">CN=DO_NOT_TRUST_Root, O=DO_NOT_TRUST, OU=Created by http://www.piotrkobylski.com</ds:X509IssuerName>
                   <ds:X509SerialNumber xmlns:ds="http://www.w3.org/2000/09/xmldsig#">3560A609A15CF59242DE520071F19A74</ds:X509SerialNumber>
                 </xades:IssuerSerial>
               </xades:Cert>
