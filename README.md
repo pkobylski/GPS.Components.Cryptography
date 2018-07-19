@@ -24,7 +24,7 @@ public static X509Certificate2 SelectCertificate (string title, string descripti
     
 public static X509Certificate2 GetCertificate(object findValue, X509FindType findType)
     
-public static byte[] PodpiszPKCS7(byt [] content, CmsSigner signer)
+public static byte[] PodpiszPKCS7(byt[] content, CmsSigner signer)
 
 public static void PodpiszPKCS7(string fileName, string signedFileName, CmsSigner signer)
 
@@ -34,15 +34,18 @@ public static byte[] GetByte64(object obj)
 
 public static byte[] GetByte64(object obj, ref string xml)
 
-public static byte[] GetByte64(byte [] byteArray)
+public static byte[] GetByte64(byte[] byteArray)
 ```
 
 ## Examples
 
 ```
+X509Certificate certificate = EDeklaracja.GetCertificate("A600C49442FD00B77894F83E5CD0C37FA48FC45D", X509FindType.FindByThumbprint);
+XmlDocument doc = XmlDocument.Load(@"c:\file.xml");
 XmlDocument signed = new XmlDocument();
-    
-byte[] byte = EDeklaracja.PodpiszXadesByte(doc, this.X509Certificate, ref signed);
+
+1) XmlDocument signedXml = EDeklaracja.PodpiszXades(doc, certificate, CryptType.SHA256);
+2) byte[] byte = EDeklaracja.PodpiszXadesByte(doc, certificate, CryptType.SHA256, ref signed);
 ```
 ## Example Signature
 
