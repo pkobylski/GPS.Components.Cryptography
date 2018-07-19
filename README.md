@@ -17,10 +17,10 @@ The EDeklaracja object in the namespace of GPS.Components.Cryptography.EDeklarac
 
     and:
 
-    1) public static X509Certificate2 SelectCertificate (string title, string description)
+    1) public static X509Certificate2 SelectCertificate (string title, string description)        
     
     2) public static X509Certificate2 GetCertificate(object findValue, X509FindType findType)
-
+    
     3) public static byte [] PodpiszPKCS7 (byte [] content, CmsSigner signer)
 
     4) public static void PodpiszPKCS7 (string fileName, string signedFileName, CmsSigner signer)
