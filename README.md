@@ -57,54 +57,7 @@ XmlDocument signed = new XmlDocument();
 The signature is compatible for the "e-deklaracje" system in Poland
 
 ```
-<Signature Id="Signature-3f81fc13-92cf-4dcb-9e79-cc952e15cf20" xmlns="http://www.w3.org/2000/09/xmldsig#">
-    <SignedInfo>
-      <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
-      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
-      <Reference Id="Signature-3f81fc13-92cf-4dcb-9e79-cc952e15cf20-XADES-Properties-Ref" URI="#XADES-Properties" Type="http://uri.etsi.org/01903/v1.1.1#SignedProperties">
-        <Transforms>
-          <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
-        </Transforms>
-        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
-        <DigestValue>G7+YKloCz86fHOCTuxwi1CpCdGHE6+b2iB9N5ef4T48=</DigestValue>
-      </Reference>
-      <Reference Id="Signature-3f81fc13-92cf-4dcb-9e79-cc952e15cf20-KeyInfo-Ref" URI="#KeyInfo">
-        <Transforms>
-          <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
-        </Transforms>
-        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
-        <DigestValue>Axmid1gAEDyUBHAF7gVmlCkHg4XPN7zSnxT5aLko6lc=</DigestValue>
-      </Reference>
-    </SignedInfo>
-    <SignatureValue>wUobDCNSKg31kJARp4GB9VuK3tYlVZh00uXJ4u4XiEHPd6gnurI0gytKjnuzUxqV4dBHac5Fg5DsCEdfA+yIhgl9Rm5h9cokpKE5cxpAJMeSb1dDj/ilEgDF7Dl1096HkXIlmfG57Ud4a/3vTIfC1CWM5YmLvD8CdFq8AIn6a9lJvZSURFyu87s2hU5HEFovVP2MeNpWxczMVXxUslpl0UjMtl9zIzm5e1nP/GnX4Trdzdz+JAImLIRPTWcpxqIHEWPkw9AfIg5+BR62Oq21wWEf8KtnC0RiiYwB4/CfpzWJjtG3WKl3cexLPd/YHxDa6LwqL974jTRGzaib7itl8A==</SignatureValue>
-    <KeyInfo Id="KeyInfo">
-      <X509Data>
-        <X509SubjectName>CN=*.piotrkobylski.com, O=DO_NOT_TRUST, OU=Created by http://www.piotrkobylski.com</X509SubjectName>
-        <X509Certificate>MIIDTDCCArWgAwIBAgIQNWCmCaFc9ZJC3lIAcfGadDANBgkqhkiG9w0BAQsFADBnMSswKQYDVQQLDCJDcmVhdGVkIGJ5IGh0dHA6Ly93d3cuZmlkZGxlcjIuY29tMRUwEwYDVQQKDAxET19OT1RfVFJVU1QxITAfBgNVBAMMGERPX05PVF9UUlVTVF9GaWRkbGVyUm9vdDAeFw0xNTA5MjMxNTM4NDFaFw0yMTA5MjIxNTM4NDFaMFsxKzApBgNVBAsMIkNyZWF0ZWQgYnkgaHR0cDovL3d3dy5maWRkbGVyMi5jb20xFTATBgNVBAoMDERPX05PVF9UUlVTVDEVMBMGA1UEAwwMKi5naXRodWIuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx9LDIsXb4f/gdo5bSzMUv5O3+wJdAsXzuz/DzfpGHTtYP8Nqc/Nzwte+1MAbmfkeGksx5PtnKW8KOtsSTsdWNk0v9v6cn7Q6o1Q/lMJawfLIV7t+tFYMuxehgfsYB85PxQ1XGh2OAXW7xvXdXsb3ZM352iHnwHNF8KyQuoF85FkfxWPDRQgteJmZvyE5hZEVA7Iwmw4nYZH8cixUaBSNSDmwaJyUipwCkm6ZMKttjWsYX10mEL05p+ggiLQjQxws2i9LBIzfsR1a7qj3/3k36fphtuu5PIpSwool7pvRzG3HuvQfq1048ztmQplFCy7EabvFvdUCDX2BaJXTq2h2UQIDAQABo4GAMH4wDgYDVR0PAQH/BAQDAgSwMBMGA1UdJQQMMAoGCCsGAQUFBwMBMBcGA1UdEQQQMA6CDCouZ2l0aHViLmNvbTAfBgNVHSMEGDAWgBRJMEiCq1b2KSEo0lRxgcTaeAigjTAdBgNVHQ4EFgQUFe171sNb9JN4LEzmHmO+WAP22jswDQYJKoZIhvcNAQELBQADgYEAbRwAguYYkycqcmhMHUKjp2si39iGo+3qugi6m0lFS85YWJDOma/S2K62PzBSIdLLuCq6v8oi4/6eiI7DBMj+jjRFgMCOTXzNl6JSP5bqHMIX+U1sjLqEczaA8KqGDkTGyP6I7JBYnHdYBCKLWPkltIFUHOlEyycFeCaX6kGojuc=</X509Certificate>
-      </X509Data>
-    </KeyInfo>
-    <Object Id="XADES">
-      <xades:QualifyingProperties Target="Signature-3f81fc13-92cf-4dcb-9e79-cc952e15cf20" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">
-        <xades:SignedProperties Id="XADES-Properties">
-          <xades:SignedSignatureProperties>
-            <xades:SigningTime>2018-07-19T21:26:48Z</xades:SigningTime>
-            <xades:SigningCertificate>
-              <xades:Cert>
-                <xades:CertDigest>
-                  <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" />
-                  <ds:DigestValue xmlns:ds="http://www.w3.org/2000/09/xmldsig#">OZxcvpyaH+nykGgYZaipqx8AXvoi8TEZs+18qEppvbU=</ds:DigestValue>
-                </xades:CertDigest>
-                <xades:IssuerSerial>
-                  <ds:X509IssuerName xmlns:ds="http://www.w3.org/2000/09/xmldsig#">CN=DO_NOT_TRUST_Root, O=DO_NOT_TRUST, OU=Created by http://www.piotrkobylski.com</ds:X509IssuerName>
-                  <ds:X509SerialNumber xmlns:ds="http://www.w3.org/2000/09/xmldsig#">3560A609A15CF59242DE520071F19A74</ds:X509SerialNumber>
-                </xades:IssuerSerial>
-              </xades:Cert>
-            </xades:SigningCertificate>
-          </xades:SignedSignatureProperties>
-        </xades:SignedProperties>
-      </xades:QualifyingProperties>
-    </Object>
-  </Signature>
+<?xml version="1.0" encoding="UTF-8"?><Signature Id="Signature-265e4f81-bdf4-402d-9753-fb977edba826" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo Id="SignedInfo-265e4f81-bdf4-402d-9753-fb977edba826"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><Reference Id="Signature-265e4f81-bdf4-402d-9753-fb977edba826-KeyInfo-Ref" URI="#Object_265e4f81-bdf4-402d-9753-fb977edba82"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>EKH/3WArnsDRO2dg8oIPHKRj1ag7A1nBvCBYb7ClJU8=</DigestValue></Reference><Reference Id="Signature-265e4f81-bdf4-402d-9753-fb977edba826-XADES-Properties-Ref" URI="#SignatureProperties-265e4f81-bdf4-402d-9753-fb977edba826" Type="http://uri.etsi.org/01903#SignedProperties"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>d7mXqSZZj5lQ3plQYBnriqUfNrMsAK+cD8F32EQcDjI=</DigestValue></Reference></SignedInfo><SignatureValue>FaUe59CE6F0it4Hi6Af8WQoXyEhJSSS0ZcLbOMVaRfPO/2CFvV27vD99ExqPWCm4ZONwzuobIw4UbcFXlcV3JYuIRDf/0QfcNS0Tl/pR64ecRVdL7DEyIHpyXfVFKsOo+oTYJUamqu5288QJDSRqNyTuSY15zzSllfK4Sh0U7M0=</SignatureValue><KeyInfo Id="KeyInfo-265e4f81-bdf4-402d-9753-fb977edba826"><X509Data><X509Certificate>MIIDXTCCAsqgAwIBAgIQZQxrqU2tfo9CUDmHzYjJXzAJBgUrDgMCHQUAMIGLMSswKQYDVQQLEyJDcmVhdGVkIGJ5IGh0dHA6Ly93d3cuZmlkZGxlcjIuY29tMSEwHwYDVQQKHhgARABPAF8ATgBPAFQAXwBUAFIAVQBTAFQxOTA3BgNVBAMeMABEAE8AXwBOAE8AVABfAFQAUgBVAFMAVABfAEYAaQBkAGQAbABlAHIAUgBvAG8AdDAeFw0xNDExMjIyMzAwMDBaFw0yNTExMjIyMjU5NTlaMGoxKzApBgNVBAsTIkNyZWF0ZWQgYnkgaHR0cDovL3d3dy5maWRkbGVyMi5jb20xITAfBgNVBAoeGABEAE8AXwBOAE8AVABfAFQAUgBVAFMAVDEYMBYGA1UEAxMPbS53ZWJ0cmVuZHMuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC45Qi6iN/Bj3z+6RlihR2sGLYWzu6LxGVoTbIrSN1vIuuSRiqSnQsANYY9MZLFseadINFatcKPg/XX/T35YQWJC9T8P0a4XnP8f1wmsiPBTHLerstiEobpo7j2oTSKqnIueJpc0QO8qn2ZRVZ36jsfTtLi4eF0y8IsNNz3IPzJlwIDAQABo4HpMIHmMAwGA1UdEwEB/wQCMAAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwgcAGA1UdAQSBuDCBtYAQQ5WclIgg5B6frIMajNqV/aGBjjCBizErMCkGA1UECxMiQ3JlYXRlZCBieSBodHRwOi8vd3d3LmZpZGRsZXIyLmNvbTEhMB8GA1UECh4YAEQATwBfAE4ATwBUAF8AVABSAFUAUwBUMTkwNwYDVQQDHjAARABPAF8ATgBPAFQAXwBUAFIAVQBTAFQAXwBGAGkAZABkAGwAZQByAFIAbwBvAHSCEPCYdYjH+KShRhpiTabMfYMwCQYFKw4DAh0FAAOBgQCS5n3b8kPViASj6SxMFJ3R2vtfn3j8wRU1UepQsRWp4qd7YcKNZNiDz04oGDyzWRHQz36MX0ZRPkYJY1jGxrV90lxa8tsiDV4ypggw/Ol4I7t/uIKJalSluPyr3KKeCdcpLcoUIO7goJ4fG5oZC9sviPYwVNwpeRCUNz3i13zeWQ==</X509Certificate></X509Data></KeyInfo><Object><xades:QualifyingProperties Id="QualifyingProperties-265e4f81-bdf4-402d-9753-fb977edba826" Target="#Signature-265e4f81-bdf4-402d-9753-fb977edba826" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignatureProperties-265e4f81-bdf4-402d-9753-fb977edba826"><xades:SignedSignatureProperties><xades:SigningTime>2018-07-24T11:37:28Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>/yupUf2AIbo8/Ypg9EOpp/501nrX8BZGLPGc8Kuux7A=</DigestValue></xades:CertDigest><xades:IssuerSerial><X509IssuerName>CN=TEST, O=DO_NOT_TRUST, OU=Created by http://www.test.com</X509IssuerName><X509SerialNumber>134316518768006064318111822423947528543</X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Signature-265e4f81-bdf4-402d-9753-fb977edba826-KeyInfo-Ref"><xades:Description>BINARY_FORMAT []</xades:Description><xades:MimeType>text/xml</xades:MimeType><xades:Encoding>http://www.w3.org/2000/09/xmldsig#base64</xades:Encoding></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></Object><Object Id="Object_265e4f81-bdf4-402d-9753-fb977edba826" MimeType="text/xml">-||-||-</Object></Signature>
 ```
 
 ## Licence
