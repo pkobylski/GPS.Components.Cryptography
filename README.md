@@ -11,7 +11,7 @@ public static XmlDocument SignXades(XmlDocument doc, X509Certificate2 cert, Cryp
 
 public static XmlDocument SignXades(string content, X509Certificate2 cert, CryptType cryptType)
 
-public static byte[] signXadesByte(XmlDocument doc, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
+public static byte[] SignXadesByte(XmlDocument doc, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
 
 public static byte[] SignXadesByteZbiorczy(string base64String, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
 
