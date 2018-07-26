@@ -7,13 +7,13 @@
 The EDeklaracja object in the namespace of GPS.Components.Cryptography.EDeklaracje provides static **main methods**:
 
 ```
-public static XmlDocument PodpiszXades(XmlDocument doc, X509Certificate2 cert, CryptType cryptType)
+public static XmlDocument SignXades(XmlDocument doc, X509Certificate2 cert, CryptType cryptType)
 
-public static XmlDocument PodpiszXades(string content, X509Certificate2 cert, CryptType cryptType)
+public static XmlDocument SignXades(string content, X509Certificate2 cert, CryptType cryptType)
 
-public static byte[] PodpiszXadesByte(XmlDocument doc, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
+public static byte[] signXadesByte(XmlDocument doc, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
 
-public static byte[] PodpiszXadesByteZbiorczy(string base64String, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
+public static byte[] SignXadesByteZbiorczy(string base64String, X509Certificate2 cert, CryptType cryptType, ref XmlDocument signedXml)
 
 Parameter @CryptType - SHA1, SHA256 (enum)
 ```
@@ -24,9 +24,9 @@ public static X509Certificate2 SelectCertificate (string title, string descripti
     
 public static X509Certificate2 GetCertificate(object findValue, X509FindType findType)
     
-public static byte[] PodpiszPKCS7(byt[] content, CmsSigner signer)
+public static byte[] SignPKCS7(byt[] content, CmsSigner signer)
 
-public static void PodpiszPKCS7(string fileName, string signedFileName, CmsSigner signer)
+public static void SignPKCS7(string fileName, string signedFileName, CmsSigner signer)
 
 public static byte[] GetByte(object obj)
 
@@ -44,13 +44,13 @@ X509Certificate certificate = EDeklaracja.GetCertificate("A600C49442FD00B77894F8
 XmlDocument doc = XmlDocument.Load(@"c:\file.xml");
 XmlDocument signed = new XmlDocument();
 
-1) XmlDocument signedXml = EDeklaracja.PodpiszXades(doc, certificate, CryptType.SHA256);
+1) XmlDocument signedXml = EDeklaracja.SignXades(doc, certificate, CryptType.SHA256);
 
-2) XmlDocument signedXml = EDeklaracja.PodpiszXades(doc.OuterXml, certificate, CryptType.SHA256);
+2) XmlDocument signedXml = EDeklaracja.SignXades(doc.OuterXml, certificate, CryptType.SHA256);
 
-3) byte[] byte = EDeklaracja.PodpiszXadesByte(doc, certificate, CryptType.SHA256, ref signed);
+3) byte[] byte = EDeklaracja.SignXadesByte(doc, certificate, CryptType.SHA256, ref signed);
 
-4) byte[] byte = EDeklaracja.PodpiszXadesByteZbiorczy("UEsDBBQAAAAIAIR8LUbQEyrgdQQAALMeAAALAAAAUElULTExWi54bWztmc9u00AQxs/wFJZPcGjXdkIhKDGqmhaFQmIlRRW5oK29tI7/bGQ7GPsIQjwEr0Pfi5mNEzuZFglOIGy1+uL5zc6uP2edkdx/8SkKtY8iSX0ZD3Tz0NA1EbvS8+Prgf724uzgma6lGY89HspYDPRCpPoL+2F/KIKQJ9xdcA0qxOlAv8my5XPG3MQ7vJYfD5chy0uZMMswu8y0mGUxs9ftMX2d/zxOrbvGAGSpeyMinhXMK30B/7HMBYs+YCmTGUfMMpkYsqH44Me+uxAXxbJolO38QVm1QkOVdUYXU6bbDzU4+mN+HUJWsD5VoXPpnckkWsHVl1wLpDcr0kxEMi8GOow9ME3tkWU+1hE50uNZsFJA1xLplXwxl1cy93nJY58P9Lmu5WD+gs9wcVDCOjBOdXtdaN5nO7M1VnHJE5/HWYNZZp/VUTriRITzUJYCptWWsoQ1vT/SbRhUg2b6VAY2GtNn8Gn38t8mpfBWtgFHn23PK8fYrmV9sCDyZWbC1YccJr39zLPYD/RGSfgmPJ+k8oqPfbilZeGWcb2SOmU8cmxzc8C6NzGa6Ygw5mNe5tw+G03fHK9z6+gdQ6anLyfjqnw9RU3q1bK7l7tmm6vdXjxg2CFZsRzoL/W7bHTsjmV0Gz5uL6g2z9rcMNM41isjATWNpGae7Szt125aWzfvyR5FvnB8keRpKWw8AXP24/cMRcf9NJD25sN65ObsnlFDnvG3sGHWX0uzZ5gH6g8G79H9u8nud6Auf+wlIp1zWH1aBrgTq82p4rBfp8dDMPYBHHW6I0MIbWNww84TvljZzmucsw40ky7lQuRQOculfTk6fX0+cSavZ+ejUxiyi5ujHHxAZPb5dHIxmc3f3X6BETBgS5q5LyM/5tvUMaRtgs2scTKU0Qp3e33W5G98sUhdmcvUtd+MTl/NTiaXk9kJpO/CPQMc6ZYZPPngm3SgNsxevJmuYtx2JifzC9iRdajyme0YTe8pvWfNTbnZKVWs3nxiVrqluJb4TNqr6ry3umgJKkVPbEOhJxQdVeiIoqcVekrRswo9o6hXoR5BHQMRKkVmhUyKrApZFHUq1KGoW6EuRcoNVIqUG6gUKTdQKVJuoFLUqxB1o6vcQKVIuYFKkXIDlSLlBipFyg1UipQbqBQpN1ApUm6gUqTcQKWoVyHqxhPlBipFyg1UipQbqBQpN1ApUm6gUqTcQKVIuYFKkXIDlSLlBipFvQpRN46UG6gUKTdQKVJuoFKk3EClSLmBSpFyA5Ui5QYqRcoNVIqUG6gU9SpE3Xiq3EClSLmBSpGFz0PU3WcrfZA2Cf/Hup3Ob3c7VtvttN1O2+3sorbbaaK229kebbfTdjttt/O3dDvd3+52Om2303Y7bbezi9pup4nabmd7tN1O2+38D93OysVfZGHPubZyb4orH8809TLzx9cykJG2rN7tce06kaWvSW8JEN+08jCWt99/fNOW0AblPkZiruUa/JyIIIUyAU/iItJSUChYRIcw/3bGh31WvW1W6/kJUEsBAj8AFAAAAAgAhHwtRtATKuB1BAAAsx4AAAsAJAAAAAAAAAAgAAAAAAAAAFBJVC0xMVoueG1sCgAgAAAAAAABABgAydA7RD4v0AFeAf/rt+7PAV4B/+u37s8BUEsFBgAAAAABAAEAXQAAAJ4EAAAAAA==", certificate, CryptType.SHA256, ref signed);
+4) byte[] byte = EDeklaracja.SignXadesByteZbiorczy("UEsDBBQAAAAIAIR8LUbQEyrgdQQAALMeAAALAAAAUElULTExWi54bWztmc9u00AQxs/wFJZPcGjXdkIhKDGqmhaFQmIlRRW5oK29tI7/bGQ7GPsIQjwEr0Pfi5mNEzuZFglOIGy1+uL5zc6uP2edkdx/8SkKtY8iSX0ZD3Tz0NA1EbvS8+Prgf724uzgma6lGY89HspYDPRCpPoL+2F/KIKQJ9xdcA0qxOlAv8my5XPG3MQ7vJYfD5chy0uZMMswu8y0mGUxs9ftMX2d/zxOrbvGAGSpeyMinhXMK30B/7HMBYs+YCmTGUfMMpkYsqH44Me+uxAXxbJolO38QVm1QkOVdUYXU6bbDzU4+mN+HUJWsD5VoXPpnckkWsHVl1wLpDcr0kxEMi8GOow9ME3tkWU+1hE50uNZsFJA1xLplXwxl1cy93nJY58P9Lmu5WD+gs9wcVDCOjBOdXtdaN5nO7M1VnHJE5/HWYNZZp/VUTriRITzUJYCptWWsoQ1vT/SbRhUg2b6VAY2GtNn8Gn38t8mpfBWtgFHn23PK8fYrmV9sCDyZWbC1YccJr39zLPYD/RGSfgmPJ+k8oqPfbilZeGWcb2SOmU8cmxzc8C6NzGa6Ygw5mNe5tw+G03fHK9z6+gdQ6anLyfjqnw9RU3q1bK7l7tmm6vdXjxg2CFZsRzoL/W7bHTsjmV0Gz5uL6g2z9rcMNM41isjATWNpGae7Szt125aWzfvyR5FvnB8keRpKWw8AXP24/cMRcf9NJD25sN65ObsnlFDnvG3sGHWX0uzZ5gH6g8G79H9u8nud6Auf+wlIp1zWH1aBrgTq82p4rBfp8dDMPYBHHW6I0MIbWNww84TvljZzmucsw40ky7lQuRQOculfTk6fX0+cSavZ+ejUxiyi5ujHHxAZPb5dHIxmc3f3X6BETBgS5q5LyM/5tvUMaRtgs2scTKU0Qp3e33W5G98sUhdmcvUtd+MTl/NTiaXk9kJpO/CPQMc6ZYZPPngm3SgNsxevJmuYtx2JifzC9iRdajyme0YTe8pvWfNTbnZKVWs3nxiVrqluJb4TNqr6ry3umgJKkVPbEOhJxQdVeiIoqcVekrRswo9o6hXoR5BHQMRKkVmhUyKrApZFHUq1KGoW6EuRcoNVIqUG6gUKTdQKVJuoFLUqxB1o6vcQKVIuYFKkXIDlSLlBipFyg1UipQbqBQpN1ApUm6gUqTcQKWoVyHqxhPlBipFyg1UipQbqBQpN1ApUm6gUqTcQKVIuYFKkXIDlSLlBipFvQpRN46UG6gUKTdQKVJuoFKk3EClSLmBSpFyA5Ui5QYqRcoNVIqUG6gU9SpE3Xiq3EClSLmBSpGFz0PU3WcrfZA2Cf/Hup3Ob3c7VtvttN1O2+3sorbbaaK229kebbfTdjttt/O3dDvd3+52Om2303Y7bbezi9pup4nabmd7tN1O2+38D93OysVfZGHPubZyb4orH8809TLzx9cykJG2rN7tce06kaWvSW8JEN+08jCWt99/fNOW0AblPkZiruUa/JyIIIUyAU/iItJSUChYRIcw/3bGh31WvW1W6/kJUEsBAj8AFAAAAAgAhHwtRtATKuB1BAAAsx4AAAsAJAAAAAAAAAAgAAAAAAAAAFBJVC0xMVoueG1sCgAgAAAAAAABABgAydA7RD4v0AFeAf/rt+7PAV4B/+u37s8BUEsFBgAAAAABAAEAXQAAAJ4EAAAAAA==", certificate, CryptType.SHA256, ref signed);
 ```
 ## Example object with Signature
 
