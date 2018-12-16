@@ -1,6 +1,6 @@
 # GPS.Components.Cryptography
 
-.NET Library for signature Xades-BES (SAH-1, SHA-256 Enveloped, Enveloping) and PKCS#7.
+.NET Library for signature Xades-BES (SHA-1, SHA-256 Enveloped, Enveloping) and PKCS#7.
 
 ## Methods
 
