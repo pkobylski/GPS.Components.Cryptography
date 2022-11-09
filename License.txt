@@ -1,0 +1,5 @@
+The library is not opensource.
+
+Using components without a serial number displays the message:
+The author of the components for signature is Piotr. Please contact: kobylski.piotr@gmail.com
+but signature structure is valid.
