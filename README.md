@@ -2,7 +2,8 @@
 
 .NET Library for signature Xades-BES (SHA-1, SHA-256 Enveloped, Enveloping) and PKCS#7.
 
-Download GPS.Components.Cryptography.dll: https://drive.google.com/file/d/1L91TkunVJLoA5IE-ExHMWeRWvncYhQFD/view?usp=sharing
+.NET Framework 4.0: Download GPS.Components.Cryptography.dll: https://drive.google.com/file/d/1L91TkunVJLoA5IE-ExHMWeRWvncYhQFD/view?usp=sharing
+.NET Standard 2.0: https://www.nuget.org/packages/Xades.Components
 
 ## Methods
 
